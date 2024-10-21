@@ -1,0 +1,297 @@
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  height: 100%;
+}
+
+/* Parallax section */
+.parallax-section {
+  height: 100vh; /* Full viewport height */
+  background-image: url('services.webp'); /* Replace with your image */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Overlay content */
+.content-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Normal section after the parallax */
+.normal-section {
+  background-color: #395776;
+  text-align: center;
+  padding: 1px 0;
+  background: linear-gradient(to bottom, #395776, #6fb5df); 
+  /* background: linear-gradient(270deg, #ff7e5f, #feb47b, #00c6ff, #0072ff); /* Starting gradient colors */
+  /* background-size: 800% 800%; Ensure the gradient covers the entire section */
+  /* animation: gradientMove 10s ease infinite; */
+}
+
+.normal-section h1 {
+  font-size: 3rem;
+}
+
+.normal-section p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Container to hold the 3 vertical services */
+.services-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50vh; /* Adjust as needed */
+  margin-top: 40px;
+}
+
+/* Individual services in each vertical section */
+.service {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border: 4px solid white;
+  border-radius: 2%;
+  width: 200px;
+  height: 300px; /* Increase the height to accommodate the icons */
+  box-sizing: border-box;
+  margin: 0 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* Optional: Transparent background for a cool effect */
+  position: relative;
+}
+
+.service h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  margin-top: 70px; /* Adjust the top margin to make space for the icon */
+}
+
+.service p {
+  font-size: 1rem;
+  max-width: 150px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Service Background Images */
+.service:nth-child(1) {
+  background-image: url('clipboard.png'); /* Replace with actual image URL */
+  background-size: 60px 60px; /* Adjust the size as needed */
+  background-position: center top 10px; /* Position the icon at the top */
+  background-repeat: no-repeat;
+}
+
+.service:nth-child(2) {
+  background-image: url('ai.png'); /* Replace with actual image URL */
+  background-size: 60px 60px; /* Adjust the size as needed */
+  background-position: center top 10px; /* Position the icon at the top */
+  background-repeat: no-repeat;
+}
+
+.service:nth-child(3) {
+  background-image: url('magnifier.png'); /* Replace with actual image URL */
+  background-size: 60px 60px; /* Adjust the size as needed */
+  background-position: center top 10px; /* Position the icon at the top */
+  background-repeat: no-repeat;
+}
+
+/* Responsive Media Query for mobile */
+@media (max-width: 768px) {
+  .services-container {
+    flex-direction: column; /* Stack services vertically on small screens */
+  }
+
+  .service {
+    margin-bottom: 20px;
+    width: 150px; /* Adjust for smaller screens */
+    height: 150px; /* Adjust for smaller screens */
+    margin: 20px 0; /* Add vertical space between stacked services */
+  }
+
+  .service h2 {
+    font-size: 1.2rem;
+  }
+
+  .service p {
+    font-size: 0.9rem;
+  }
+}
+
+h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+.content-overlay h1 {
+  color: white; /* Ensure the text is white */
+  font-size: 3rem; /* Increase the font size if needed */
+  border: 3px solid black; /* Add a black border around the text */
+  padding: 10px; /* Adjust padding around the text */
+  display: inline-block; /* Ensure the border wraps tightly around the text */
+  text-shadow: 3px 3px 5px black; /* Add a dark shadow for extra emphasis */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background */
+  border-radius: 10px; /* Optional: Slightly round the border corners */
+}
+
+.normal-section h1, .normal-section p {
+  margin-top: 10px; /* Adjust margin between heading and text */
+  margin-bottom: 20px; /* Adjust spacing between text and next section */
+}
+
+.future-plans-section {
+  background: linear-gradient(to bottom, #6fb5df, #9ed8ee);
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.future-plans-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.slides {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Center text within the slide */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* Allow positioning for the buttons */
+  width: 100%;
+}
+
+/* Center the slide heading and text */
+.slides .slide {
+  margin-bottom: 20px;
+}
+
+.slides .slide h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.slides .slide p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  text-align: center; /* Center the paragraph text */
+}
+
+/* Style buttons to be on the left and right side */
+button.prev, button.next {
+  cursor: pointer;
+  font-size: 2rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute; /* Position buttons absolutely inside the slideshow container */
+  top: 50%; /* Center the buttons vertically */
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+button.prev {
+  left: 10px; /* Position button on the left */
+}
+
+button.next {
+  right: 10px; /* Position button on the right */
+}
+
+button.prev:hover, button.next:hover {
+  background-color: #555;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* Team Section */
+.team-section {
+  background: linear-gradient(to bottom, #9ed8ee, #b6c8d6);
+  color: #333;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.team-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.team-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.team-member {
+  background: linear-gradient(to bottom, #9ed8ee, #b6c8d6);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 200px;
+  text-align: center;
+}
+
+.team-member img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.team-member h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.team-member h3 {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #777;
+}
